@@ -190,6 +190,10 @@ func NewIterator(b []byte) (*Iter, error) {
 	}, nil
 }
 
+func (it *Iter) T0() uint32 {
+	return it.t0
+}
+
 func (it *Iter) Next() bool {
 
 	if it.err != nil || it.finished {
